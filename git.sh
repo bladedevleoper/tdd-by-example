@@ -9,7 +9,7 @@ git add .
 echo "what is your commit message"
 read commitMessage
 git commit -m "$commitMessage"
-git push "https://$user:$pass@tdd-by-example.git"
+git push "https://$user:$pass@tdd-by-example.git" --all
 
 #exec echo $user
 #exec echo $pass
