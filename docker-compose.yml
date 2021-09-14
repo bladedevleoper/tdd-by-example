@@ -1,0 +1,45 @@
+version: '3.0'
+
+networks: 
+    kata_network:
+          driver: bridge
+          ipam:
+            config: 
+                - subnet: 174.40.0.0/16
+
+services:
+      db:
+        container_name: code_kata_db
+        image: mysql:5.7
+        ports:
+            - "3306:3306"
+        networks: 
+            kata_network:
+              ipv4_address: 174.40.0.10
+        #database environment details
+        environment: 
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_ROOT_PASSWORD: rootp
+            MYSQL_USER: ${DB_USERNAME}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+      
+      app:
+        container_name: kata_app
+        build:
+          context: .
+          dockerfile: ./Dockerfile
+          args:
+            uid: ${UID}
+        working_dir: /var/www/html
+        environment: 
+            - APACHE_RUN_USER=#${UID}
+            - APACHE_RUN_GROUP=#${UID}
+        ports:
+          - "8081:80"
+        networks:
+            kata_network:
+                ipv4_address: 174.40.0.11
+        volumes: 
+            - .:/var/www/html
+        depends_on: 
+            - db
