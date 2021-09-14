@@ -1,7 +1,7 @@
 #!/bin/bash
 #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
 user="bladedevleoper";
-pass="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";
+pass="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";
 
 
 git add .
