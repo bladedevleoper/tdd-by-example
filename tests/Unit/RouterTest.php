@@ -8,12 +8,14 @@ use Exception;
 
 class RouterTest extends TestCase
 {
+    //will run before each test
     protected function setUp(): void
     {
         Router::post('/profile', ['ProfileController', 'index']);
         Router::get('/show-profile', ['ProfileController', 'show']);
     }
 
+    //will unset after each test
     protected function tearDown(): void
     {
         Router::$routes['post'] = [];

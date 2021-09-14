@@ -6,6 +6,7 @@ use Exception;
 
 class Router
 {
+    
     public static array $routes = [
         'post' => [],
         'get' => [],
