@@ -9,7 +9,10 @@ git add .
 echo "what is your commit message"
 read commitMessage
 git commit -m "$commitMessage"
-echo $user | git push | echo $pass
+git push
+
+exec echo $user
+exec echo $pass
 
 
 #echo $user | git push
