@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 use App\Router\Router;
 use Exception;
 
-class RouterTest extends TestCase 
+class RouterTest extends TestCase
 {
     //will run before each test
     protected function setUp(): void
