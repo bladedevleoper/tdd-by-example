@@ -12,5 +12,5 @@ git commit -m "$commitMessage"
 //git push
 
 
-echo $user && $pass | git push
+echo $user | git push
 #echo $pass 
