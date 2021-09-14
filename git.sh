@@ -11,7 +11,7 @@ read commitMessage
 git commit -m "$commitMessage"
 test = git push
 
-if [[ test == "Username for 'https://github.com':"]] then
+if [[ "$test" == "Username for 'https://github.com':"]]; then
 
     echo 'yes'
 
