@@ -37,7 +37,6 @@ class RouterTest extends TestCase
     {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('Url not found in the following route post');
-        //var_dump(Router::find('post', 'does-not-exist'));
         $route = Router::find('post', 'does-not-exist');
     }
 
