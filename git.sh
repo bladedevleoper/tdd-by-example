@@ -9,9 +9,9 @@ git add .
 echo "what is your commit message"
 read commitMessage
 git commit -m "$commitMessage"
-//git push
+test = git push
 
-if [[ "Username for 'https://github.com':"]]; then
+if [[ test == "Username for 'https://github.com':"]]; then
 
     echo 'yes'
 
