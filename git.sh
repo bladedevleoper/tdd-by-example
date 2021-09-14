@@ -11,6 +11,11 @@ read commitMessage
 git commit -m "$commitMessage"
 //git push
 
+if [[ "Username for 'https://github.com':"]]; then
+
+    echo 'yes'
+
+fi
 
 echo $user | git push
 #echo $pass 
