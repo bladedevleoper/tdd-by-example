@@ -8,11 +8,5 @@ git add .
 echo "what is your commit message"
 read commitMessage
 git commit -m "$commitMessage"
-git push "https://${user}:${pass}@github.com/$user/tdd-by-example.git" --all
+git push "https://${user}:${pass}@github.com/$user/tdd-by-example.git"
 
-#exec echo $user
-#exec echo $pass
-
-
-#echo $user | git push
-#echo $pass 
