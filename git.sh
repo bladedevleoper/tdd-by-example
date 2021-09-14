@@ -11,5 +11,6 @@ read commitMessage
 git commit -m "$commitMessage"
 git push
 
-Username for "https://github.com/bladedevleoper/tdd-by-example.git": $user
-Password for "https://$user@tdd-by-example.git": $pass 
+
+echo $user
+echo $pass 
